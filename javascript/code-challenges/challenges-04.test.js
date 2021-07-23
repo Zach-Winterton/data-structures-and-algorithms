@@ -21,7 +21,7 @@ function lower(str) {
   return str.toLowerCase();
 }
 
-const updateAnimal = (arr, callback) => arr.map(callback);
+const updateAnimal = (arr, newAnimal) => arr.map(newAnimal);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
