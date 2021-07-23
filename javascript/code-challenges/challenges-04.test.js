@@ -21,6 +21,7 @@ function lower(str) {
   return str.toLowerCase();
 }
 
+
 const updateAnimal = (arr, callback) => arr.map(callback);
 
 /* ------------------------------------------------------------------------------------------------
@@ -29,8 +30,7 @@ CHALLENGE 2
 Write a function called sortNames that takes an array of names and sorts them alphabetically. Capital letters should come before lowercase letters.
 
 For example: 'Cat' would come before 'apple'
------------------------------------------------------------------------------------------------- */
-
+------------------------------------------------------------------------------------------------
 const sortNames = (arr) => arr.sort();
   
 
@@ -55,8 +55,10 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 ------------------------------------------------------------------------------------------------ */
 
+
 const sortBackwards = (arr) => arr.sort((a,b) => b-a);
   
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -68,7 +70,9 @@ In this alphabetization, capital letters come before lower case letters.
 For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
+
 const alphabetize = (arr) => arr.sort();
+
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -83,7 +87,6 @@ Here is an example of the input:
   {name: 'Tote bag', price: 15}
 ];
 ------------------------------------------------------------------------------------------------ */
-
 const sortByPrice = (arr) => arr.sort((a,b) => a.price-b.price);
   
 
