@@ -21,8 +21,7 @@ function lower(str) {
   return str.toLowerCase();
 }
 
-
-const updateAnimal = (arr, callback) => arr.map(callback);
+const updateAnimal = (arr, Animal) => arr.map(Animal);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -30,9 +29,9 @@ CHALLENGE 2
 Write a function called sortNames that takes an array of names and sorts them alphabetically. Capital letters should come before lowercase letters.
 
 For example: 'Cat' would come before 'apple'
-------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------ */
+
 const sortNames = (arr) => arr.sort();
-  
 
 
 /* ------------------------------------------------------------------------------------------------
