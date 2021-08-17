@@ -8,8 +8,8 @@ Write a function named returnTen, takes in a string and uses split and splice to
 ------------------------------------------------------------------------------------------------ */
 
 function returnTen(str){
-
-
+ 
+}
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -72,8 +72,15 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  // Solution code here...
-
+  const hourlySales=[];
+  for (let i in stores[0]){
+    let hourlyTotal =0;
+    for(let j in stores){
+      hourlyTotal += stores[j][i];
+    }
+    hourlySales.push(hourlyTotal);
+  }
+  return hourlySales;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -87,7 +94,15 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
+  const cookieSales = [];
+  data.forEach((cookies, index) => {
+    cookieSales.push({
+      sales: `${cookies} cookies`,
+      time: hours[index],
+    });
+  });
+
+  return cookieSales;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -112,7 +127,7 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  return arr[2].items[1].quantity;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -324,3 +339,4 @@ xdescribe('Testing challenge 11', () => {
     expect(result[2]).toStrictEqual(27);
   });
 });
+
