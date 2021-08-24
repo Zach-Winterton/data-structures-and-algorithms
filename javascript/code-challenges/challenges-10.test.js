@@ -28,7 +28,7 @@ return: 23
 const findMax = (matrix) => {
   let number = 0;
   matrix.map(value =>{
-    value.map(highest => highest > number ? number = highest: highest);
+    value.map(highest => highest > number ? number = highest : highest);
   });
   return (number);
 };
