@@ -7,9 +7,16 @@ Write a function named longestString that takes in an array of strings and retur
 ------------------------------------------------------------------------------------------------ */
 
 const longestString = (arr) => {
-// Solution code here...
+  let Longest = { largestIdx: -1, largestString: 0 };
+
+  arr.forEach((str, idx) => {
+    (str.length > Longest.largestString) ? Longest = {
+      largestIdx: idx, largestString: str.length
+    } : '';
+  });
+  return Longest.largestIdx;
 };
-  
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -42,9 +49,9 @@ Write a function named standardizePhoneNumbers that takes in an array of phone n
 For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
-const standardizePhoneNumbers = (arr) => {
-  // Solution code here...
-};
+const standardizePhoneNumbers = (arr) =>
+  arr.map((num) => `${num.substring(1, 4)}${num.substring(6, 9)}${num.substring(10)}`);
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 
@@ -54,9 +61,9 @@ Write a function named onlyOddChars that takes in a string and returns only the 
 For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
-const onlyOddChars = (str) => {
-  // Solution code here...
-};
+const onlyOddChars = (str) => str.split('').filter((elem,idx)=>idx %2===1).join('');
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 
@@ -64,9 +71,9 @@ CHALLENGE 6
 Write a function named allHappy that takes in an array of strings and returns a Boolean indicating whether all those strings contain ":)".
 ------------------------------------------------------------------------------------------------ */
 
-const allHappy = (arr) => {
-  // Solution code here...
-};
+const allHappy = (arr) => arr.every((str)=>str.includes(':)'));
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
