@@ -18,13 +18,13 @@ Becomes:
 ]
 ------------------------------------------------------------------------------------------------ */
 
-function transformToLis(obj)
+function transformToLis(obj){
   let newArray = Object.keys(obj);
   return newArray.map(key => {
     return `<li>${key}: ${obj[key]}</li>`;
   });
-
 }
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -153,10 +153,8 @@ let starWarsData = [{
 
 
 
-=======
-let findMaleAndFemale = (data) => let findMaleAndFemale = (data) => data.filter(character => character.gender === 'male'|| character.gender === 'female').map(character => character.name).join(' and ');
+let findMaleAndFemale = (data) => data.filter(character => character.gender === 'male'|| character.gender === 'female').map(character => character.name).join(' and ');
 
-  
 
 
 
@@ -172,7 +170,7 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 
 
 let findShortest = (data) => {
-  let findShortest = (data) =>data.reduce((shortest, character)=>Number(shortest.height)<Number(character.height)?shortest:character).name;
+  return data.reduce((shortest, character)=> Number(shortest.height)< Number(character.height)?shortest:character).name;
 };
 
 /* ------------------------------------------------------------------------------------------------
